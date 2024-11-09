@@ -13,27 +13,27 @@ import java.util.Scanner;
 
 public class filepratice {
     public static void main(String[] args){
-        // Path to the file (update with the correct path)
+       
         File inputfile = new File("path/to/yourfile.txt"); 
 
-        List<String> namesOver3_5 = new ArrayList<>(); // Stores names with GPA > 3.5
-        int totalNames = 0; // Total count of names in file
+        List<String> namesOver3_5 = new ArrayList<>(); 
+        int totalNames = 0; 
 
         try {
             Scanner input = new Scanner(inputfile);
 
-            // Loop through each pair of lines in the file
+            
             while (input.hasNextLine()) {
-                // Read name from the first line
+                
                 String name = input.nextLine();
                 
-                // Read GPA from the second line and parse it
+                
                 double gpa = Double.parseDouble(input.nextLine());
 
-                // Increment total name count
+                
                 totalNames++;
 
-                // Check if GPA > 3.5 and add name to list if true
+                
                 if (gpa > 3.5) {
                     namesOver3_5.add(name);
                 }
